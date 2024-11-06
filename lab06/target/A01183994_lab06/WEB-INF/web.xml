@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <display-name>A01183994_lab06</display-name>
+    
+    <servlet>
+        <servlet-name>GreetingServlet</servlet-name>
+        <servlet-class>ca.bcit.a01183994.lab06.GreetingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GreetingServlet</servlet-name>
+        <url-pattern>/greeting</url-pattern>
+    </servlet-mapping>
+    
+    <context-param>
+        <param-name>htmlHeadTitle</param-name>
+        <param-value>COMP3601 Lab06</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>inputMessage</param-name>
+        <param-value>Type your first name and press "Submit"</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>welcomeMessage</param-name>
+        <param-value>Welcome to JavaServer Pages!</param-value>
+    </context-param>
+    
+    <welcome-file-list>
+        <welcome-file>greeting</welcome-file>
+    </welcome-file-list>
+</web-app>
